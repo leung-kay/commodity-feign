@@ -1,0 +1,25 @@
+server:
+  port: 9014
+
+logging:
+  level:
+    root: info
+    com.ruifucredit.cloud.commodity: debug
+
+spring:
+  application:
+    name: ${eureka.instance.appname}
+
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@ip:port/name
+    username: username
+    password: password
+
+eureka:
+  instance:
+    appname: commodity-feign
+    
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
